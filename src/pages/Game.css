@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+
+body {
+  font-family: 'Delius', cursive;
+
+}
+
+.gamebody,
+.bodycard {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background: url("/src/img/background\ game.jpg")no-repeat center center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.card {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.title {
+  -webkit-text-stroke: 1px #e4f9fa;
+  text-shadow: 2px 2px #111;
+  font-size: 4rem;
+  margin-bottom: 20px;
+  transform: skewY(-7deg);
+  animation: titleanim 5s ease-in-out infinite;
+}
+
+@keyframes titleanim {
+
+  0%,
+  100% {
+    transform: skewY(-7deg) translate(0, -30px);
+
+  }
+
+  50% {
+    transform: skewY(-6deg) translate(0, 30px);
+  }
+}
+
+.music-btn {
+  cursor: pointer;
+  border-radius: 50%;
+  border: .3rem solid #000000;
+  position: fixed;
+  top: 15px;
+  padding: 0.5rem;
+  right: 15px;
+  width: 1rem;
+  height: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.music-btn img {
+  width: 100%;
+}
+
+.main-p {
+  top: 0;
+  font-size: 1.2rem;
+  font-family: "Paytone One";
+  color: #000;
+  border: 2px solid #eee;
+  position: absolute;
+  padding-left: 35px;
+  padding-right: 45px;
+  padding-top: 15px;
+  background-color: rgba(255, 255, 255, 0.781);
+  width: 300px;
+  height: 40px;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+  box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.425);
+  text-shadow: -1px 4px 9px #a39dc4, 0px -2px 0px #fff, 0px 0px 2px #222;
+}
+
+.card {
+  margin-top: 180px;
+  padding: 30px;
+  text-align: center;
+  width: 45vw;
+  background-color: #ffffff;
+  border: 2px solid;
+  color: #e4f9fa;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  height: 45%;
+  border-radius: 0.5em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.card h2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 5vw;
+  color: #6AB3F8;
+  text-align: center;
+  z-index: 10;
+  font-family: 'Paytone One', sans-serif;
+  transform: skewY(1deg);
+  text-shadow: 1px 1px 0 rgb(102, 101, 101),
+    2px 2px 0 #222,
+    3px 3px 0 #222,
+    3px 3px 0 rgba(0, 0, 0, 0.2);
+  animation: tspring 3s ease-in-out infinite;
+}
+
+@keyframes tspring {
+
+  0%,
+  100% {
+    transform: skewY(1deg) translate(0, -15px);
+
+  }
+
+  50% {
+    transform: skewY(-1deg) translate(0, 15px);
+  }
+
+}
+
+.card p {
+  font-size: 1.8rem;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.164), 0 8px 70px rgba(0, 0, 0, 0.158);
+  color: black;
+}
+
+.card button {
+  cursor: pointer;
+  width: 30%;
+  color: #FFF;
+  background: #6AB3F8;
+  border: 2px solid #000;
+  padding: 15px;
+  font-family: 'Paytone One', sans-serif;
+  transition: box-shadow 100ms ease-in-out;
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.425);
+}
+
+.card button:hover {
+  transition: 0.5s;
+  box-shadow: 0px -3px 0px -3px rgba(0, 0, 0, 0.425);
+  border: 2px solid #000;
+  background: #000;
+  color: #FFF;
+
+}
+
+.card button:focus {
+  outline: none;
+}
+
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 11rem);
+  grid-template-rows: repeat(3, 9rem);
+  gap: 0rem;
+  align-items: center;
+  margin-top: 20%;
+  height: 100vh;
+}
+
+.grid-item {
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.hole {
+  position: absolute;
+  width: 95%;
+  bottom: 0.5rem;
+  z-index: 2;
+}
+
+.hole-content {
+  width: 50%;
+  position: relative;
+  top: 5px;
+  transition: 0;
+  z-index: 200;
+}
+
+.Penguin {
+  animation: pop-up 0.1s linear;
+  width: 100px;
+  height: 90px;
+  margin-bottom: 100px;
+  z-index: 1;
+}
+
+.btnBack {
+  font-family: 'Paytone One', sans-serif;
+  cursor: pointer;
+  width: auto;
+  text-decoration: none;
+  color: #6AB3F8;
+  background-color: rgba(255, 255, 255, 0.781);
+  padding: 10px;
+  border: 2px solid #eee;
+  border-bottom-left-radius: 30px;
+  border-top-left-radius: 30px;
+  box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.425);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.LinkBtnBack {
+  text-decoration: none;
+
+}
+
+
+.btnBack:hover {
+  transition: 0.5s;
+  color: #eee;
+  background-color: #6AB3F8;
+  border: 2px solid#6AB3F8;
+}
+
+@keyframes pop-up {
+  from {
+    transform: translateY(1rem);
+  }
+
+  to {
+    transform: translateY(1px);
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .card {
+    width: 80vw;
+    max-width: 100vw;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  html {
+    font-size: 8px;
+  }
+
+  .title {
+    font-size: 6rem;
+  }
+
+  .game-grid {
+    transform: rotate(0deg);
+    grid-template-columns: repeat(3, calc(80vw / 3));
+    grid-template-rows: repeat(3, calc(90vw / 4));
+  }
+
+  .grid-item {
+    height: calc(90vw / 3);
+    transform: rotate(0deg);
+  }
+
+  .hole-content {
+    transform: scale(1.5) translateY(2.9rem);
+    top: -18px;
+  }
+}
+
+/* @media screen and (max-width: 740px) {
+  .title{
+    font-size: 8vw;
+  }
+} */
+
+@media screen and (max-width: 460px) {
+  .card {
+    width: 90vw;
+  }
+
+  html {
+    font-size: 1.8vw;
+  }
+
+  .hole-content {
+    top: -4vw;
+  }
+}
+
+.popup {
+  position: absolute;
+  top: 0;
+  font-size: 30px;
+  transform: translateY(-1000px);
+  transition: 3s ease;
+
+}
+
+.popup.active {
+  position: absolute;
+  top: 0;
+  font-size: 30px;
+  transform: translateY(25px);
+  transition: 1s ease;
+}
