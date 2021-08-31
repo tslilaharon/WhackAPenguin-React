@@ -6,6 +6,7 @@ Registration and login using the Whack A Penguin game system
 
 
 
+
 ![WhackAPenguin](https://user-images.githubusercontent.com/59604062/124724697-e472c980-df14-11eb-91dc-99e7682010ec.png)
 
 
