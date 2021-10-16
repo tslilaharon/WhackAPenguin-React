@@ -1,7 +1,7 @@
 
 ###  Whack A Penguin
 
-
+ 
 Registration and Login to the Whack A Penguin Game
 
 Whack A Penguin Game
